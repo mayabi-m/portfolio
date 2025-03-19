@@ -1,15 +1,62 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block content %}
 <section id="projects">
     <h2>My Projects</h2>
-    {% for project in projects %}
+
     <div class="project">
-        <h3>{{ project.title }}</h3>
-        <img src="{{ project.image.url }}" alt="{{ project.title }}">
-        <p>{{ project.description }}</p>
-        <a href="{{ project.github_link }}" target="_blank">View Code</a>
+        <h3>E-Commerce Website</h3>
+        <img src="{% static 'images/ecommerce.png' %}" alt="E-Commerce Website Screenshot">
+        <h4>Problem</h4>
+        <p>
+            A local business needed an online platform to sell their products and reach a wider audience.
+        </p>
+        <h4>Solution</h4>
+        <p>
+            I developed a fully functional e-commerce website using Django, Bootstrap, and Stripe for payment processing. The website features a user-friendly interface, secure authentication, and real-time inventory management.
+        </p>
+        <h4>Outcome</h4>
+        <p>
+            The business saw a 40% increase in sales within the first three months of launching the website.
+        </p>
+        <a href="https://github.com/yourusername/ecommerce" target="_blank" class="btn">View Code</a>
     </div>
-    {% endfor %}
+
+    <div class="project">
+        <h3>Data Visualization Dashboard</h3>
+        <img src="{% static 'images/dashboard.png' %}" alt="Data Visualization Dashboard Screenshot">
+        <h4>Problem</h4>
+        <p>
+            A client needed a way to visualize and analyze large datasets to make data-driven decisions.
+        </p>
+        <h4>Solution</h4>
+        <p>
+            I built an interactive dashboard using Python, Plotly, and Dash. The dashboard allows users to filter data, generate charts, and export reports.
+        </p>
+        <h4>Outcome</h4>
+        <p>
+            The client reported a 50% reduction in time spent analyzing data and improved decision-making accuracy.
+        </p>
+        <a href="https://github.com/yourusername/dashboard" target="_blank" class="btn">View Code</a>
+    </div>
+
+    <div class="project">
+        <h3>Task Management App</h3>
+        <img src="{% static 'images/taskapp.png' %}" alt="Task Management App Screenshot">
+        <h4>Problem</h4>
+        <p>
+            A team needed a centralized platform to manage tasks, track progress, and collaborate effectively.
+        </p>
+        <h4>Solution</h4>
+        <p>
+            I created a task management app using Django and React. The app includes features like task assignment, due date tracking, and real-time notifications.
+        </p>
+        <h4>Outcome</h4>
+        <p>
+            The team’s productivity increased by 30%, and project completion rates improved significantly.
+        </p>
+        <a href="https://github.com/yourusername/taskapp" target="_blank" class="btn">View Code</a>
+    </div>
 </section>
 {% endblock %}
